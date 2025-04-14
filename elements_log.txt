@@ -1,0 +1,869 @@
+Tag: html, Attributes: <html class=""><head>
+    <meta charset="utf-8">
+    <title>Поддержка Telegram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Поддержка Telegram">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Telegram">
+    <meta property="og:description" content="">
+    
+    
+    <meta property="fb:app_id" content="254098051407226">
+    <meta property="vk:app_id" content="3782569">
+    <meta name="apple-itunes-app" content="app-id=686449807">
+    <meta name="telegram:channel" content="@telegram">
+    
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    <link href="/css/bootstrap-extra.css?2" rel="stylesheet">
+    <link href="/css/telegram.css?244" rel="stylesheet" media="screen">
+  </head>
+  <body class="">
+    <div id="fb-root"></div>
+    <div class="tl_page_wrap">
+      <div class="tl_page_head navbar navbar-static-top navbar navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+<ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix tl_page_container ">
+        <div class="tl_page">
+          <div class="container">
+  <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram — это облачный мессенджер для мобильных устройств и компьютеров. Быстрый и безопасный.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Приватность</a></li>
+        <li><a href="/press">Для СМИ</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#mobile-apps">Для мобильных</a></h5>
+      <ul>
+        <li><a href="/dl/ios">iPhone/iPad</a></li>
+        <li><a href="/android">Android</a></li>
+        <li><a href="/dl/web">Мобильная веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#desktop-apps">Для компьютера</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="/dl/web">Веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="//core.telegram.org/">Платформы</a></h5>
+      <ul>
+        <li><a href="//core.telegram.org/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Переводы</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/blog">Блог</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/press">Для СМИ</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/moderation">Модерация</a></h5>
+    </div>
+  </div>
+</div>
+    <script src="/js/main.js?47"></script>
+    
+    <script>backToTopInit("\u041d\u0430\u0432\u0435\u0440\u0445");
+removePreloadInit();
+</script>
+  
+
+
+</body></html>
+Tag: head, Attributes: <head>
+    <meta charset="utf-8">
+    <title>Поддержка Telegram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Поддержка Telegram">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Telegram">
+    <meta property="og:description" content="">
+    
+    
+    <meta property="fb:app_id" content="254098051407226">
+    <meta property="vk:app_id" content="3782569">
+    <meta name="apple-itunes-app" content="app-id=686449807">
+    <meta name="telegram:channel" content="@telegram">
+    
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    <link href="/css/bootstrap-extra.css?2" rel="stylesheet">
+    <link href="/css/telegram.css?244" rel="stylesheet" media="screen">
+  </head>
+Tag: meta, Attributes: <meta charset="utf-8">
+Tag: title, Attributes: <title>Поддержка Telegram</title>
+Tag: meta, Attributes: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+Tag: meta, Attributes: <meta property="og:title" content="Поддержка Telegram">
+Tag: meta, Attributes: <meta property="og:image" content="">
+Tag: meta, Attributes: <meta property="og:site_name" content="Telegram">
+Tag: meta, Attributes: <meta property="og:description" content="">
+Tag: meta, Attributes: <meta property="fb:app_id" content="254098051407226">
+Tag: meta, Attributes: <meta property="vk:app_id" content="3782569">
+Tag: meta, Attributes: <meta name="apple-itunes-app" content="app-id=686449807">
+Tag: meta, Attributes: <meta name="telegram:channel" content="@telegram">
+Tag: link, Attributes: <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+Tag: link, Attributes: <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+Tag: link, Attributes: <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+Tag: link, Attributes: <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+Tag: link, Attributes: <link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon">
+Tag: link, Attributes: <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+Tag: link, Attributes: <link href="/css/bootstrap-extra.css?2" rel="stylesheet">
+Tag: link, Attributes: <link href="/css/telegram.css?244" rel="stylesheet" media="screen">
+Tag: body, Attributes: <body class="">
+    <div id="fb-root"></div>
+    <div class="tl_page_wrap">
+      <div class="tl_page_head navbar navbar-static-top navbar navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+<ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix tl_page_container ">
+        <div class="tl_page">
+          <div class="container">
+  <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram — это облачный мессенджер для мобильных устройств и компьютеров. Быстрый и безопасный.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Приватность</a></li>
+        <li><a href="/press">Для СМИ</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#mobile-apps">Для мобильных</a></h5>
+      <ul>
+        <li><a href="/dl/ios">iPhone/iPad</a></li>
+        <li><a href="/android">Android</a></li>
+        <li><a href="/dl/web">Мобильная веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#desktop-apps">Для компьютера</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="/dl/web">Веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="//core.telegram.org/">Платформы</a></h5>
+      <ul>
+        <li><a href="//core.telegram.org/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Переводы</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/blog">Блог</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/press">Для СМИ</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/moderation">Модерация</a></h5>
+    </div>
+  </div>
+</div>
+    <script src="/js/main.js?47"></script>
+    
+    <script>backToTopInit("\u041d\u0430\u0432\u0435\u0440\u0445");
+removePreloadInit();
+</script>
+  
+
+
+</body>
+Tag: div, Attributes: <div id="fb-root"></div>
+Tag: div, Attributes: <div class="tl_page_wrap">
+      <div class="tl_page_head navbar navbar-static-top navbar navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+<ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix tl_page_container ">
+        <div class="tl_page">
+          <div class="container">
+  <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+          
+        </div>
+      </div>
+    </div>
+Tag: div, Attributes: <div class="tl_page_head navbar navbar-static-top navbar navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+<ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+Tag: div, Attributes: <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+<ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+          </div>
+        </div>
+Tag: div, Attributes: <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+<ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+          </div>
+Tag: ul, Attributes: <ul class="nav navbar-nav navbar-right"><li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li><li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li></ul>
+Tag: li, Attributes: <li class="dropdown top_lang_select"><a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+<ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul></li>
+Tag: a, Attributes: <a class="dropdown-toggle" onclick="return dropdownClick(this, event)" href="#"><i class="dev_top_lang_icon"></i>RU <b class="minicaret"></b></a>
+Tag: i, Attributes: <i class="dev_top_lang_icon"></i>
+Tag: b, Attributes: <b class="minicaret"></b>
+Tag: ul, Attributes: <ul class="dropdown-menu"><li class=""><a href="?setln=en">English</a></li><li class="chosen "><a href="?setln=ru">Русский</a></li><li class="long "><a href="?setln=id">Bahasa Indonesia</a></li><li class="long "><a href="?setln=ms">Bahasa Melayu</a></li><li class=""><a href="?setln=de">Deutsch</a></li><li class=""><a href="?setln=es">Español</a></li><li class=""><a href="?setln=fr">Français</a></li><li class=""><a href="?setln=it">Italiano</a></li><li class=""><a href="?setln=nl">Nederlands</a></li><li class=""><a href="?setln=uz">O‘zbek</a></li><li class=""><a href="?setln=pl">Polski</a></li><li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li><li class=""><a href="?setln=tr">Türkçe</a></li><li class=""><a href="?setln=be">Беларуская</a></li><li class=""><a href="?setln=uk">Українська</a></li><li class=""><a href="?setln=ar">العربية</a></li><li class=""><a href="?setln=fa">فارسی</a></li><li class=""><a href="?setln=ko">한국어</a></li></ul>
+Tag: li, Attributes: <li class=""><a href="?setln=en">English</a></li>
+Tag: a, Attributes: <a href="?setln=en">English</a>
+Tag: li, Attributes: <li class="chosen "><a href="?setln=ru">Русский</a></li>
+Tag: a, Attributes: <a href="?setln=ru">Русский</a>
+Tag: li, Attributes: <li class="long "><a href="?setln=id">Bahasa Indonesia</a></li>
+Tag: a, Attributes: <a href="?setln=id">Bahasa Indonesia</a>
+Tag: li, Attributes: <li class="long "><a href="?setln=ms">Bahasa Melayu</a></li>
+Tag: a, Attributes: <a href="?setln=ms">Bahasa Melayu</a>
+Tag: li, Attributes: <li class=""><a href="?setln=de">Deutsch</a></li>
+Tag: a, Attributes: <a href="?setln=de">Deutsch</a>
+Tag: li, Attributes: <li class=""><a href="?setln=es">Español</a></li>
+Tag: a, Attributes: <a href="?setln=es">Español</a>
+Tag: li, Attributes: <li class=""><a href="?setln=fr">Français</a></li>
+Tag: a, Attributes: <a href="?setln=fr">Français</a>
+Tag: li, Attributes: <li class=""><a href="?setln=it">Italiano</a></li>
+Tag: a, Attributes: <a href="?setln=it">Italiano</a>
+Tag: li, Attributes: <li class=""><a href="?setln=nl">Nederlands</a></li>
+Tag: a, Attributes: <a href="?setln=nl">Nederlands</a>
+Tag: li, Attributes: <li class=""><a href="?setln=uz">O‘zbek</a></li>
+Tag: a, Attributes: <a href="?setln=uz">O‘zbek</a>
+Tag: li, Attributes: <li class=""><a href="?setln=pl">Polski</a></li>
+Tag: a, Attributes: <a href="?setln=pl">Polski</a>
+Tag: li, Attributes: <li class="long "><a href="?setln=pt-br">Português (Brasil)</a></li>
+Tag: a, Attributes: <a href="?setln=pt-br">Português (Brasil)</a>
+Tag: li, Attributes: <li class=""><a href="?setln=tr">Türkçe</a></li>
+Tag: a, Attributes: <a href="?setln=tr">Türkçe</a>
+Tag: li, Attributes: <li class=""><a href="?setln=be">Беларуская</a></li>
+Tag: a, Attributes: <a href="?setln=be">Беларуская</a>
+Tag: li, Attributes: <li class=""><a href="?setln=uk">Українська</a></li>
+Tag: a, Attributes: <a href="?setln=uk">Українська</a>
+Tag: li, Attributes: <li class=""><a href="?setln=ar">العربية</a></li>
+Tag: a, Attributes: <a href="?setln=ar">العربية</a>
+Tag: li, Attributes: <li class=""><a href="?setln=fa">فارسی</a></li>
+Tag: a, Attributes: <a href="?setln=fa">فارسی</a>
+Tag: li, Attributes: <li class=""><a href="?setln=ko">한국어</a></li>
+Tag: a, Attributes: <a href="?setln=ko">한국어</a>
+Tag: li, Attributes: <li class="navbar-twitter hidden-xs"><a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a></li>
+Tag: a, Attributes: <a href="https://twitter.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Twitter</a>
+Tag: i, Attributes: <i class="icon icon-twitter"></i>
+Tag: ul, Attributes: <ul class="nav navbar-nav">
+  <li class=""><a href="/">Главная</a></li>
+  <li class=""><a href="/faq">FAQ</a></li>
+  <li class=""><a href="/apps">Приложения</a></li>
+  <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+  <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+</ul>
+Tag: li, Attributes: <li class=""><a href="/">Главная</a></li>
+Tag: a, Attributes: <a href="/">Главная</a>
+Tag: li, Attributes: <li class=""><a href="/faq">FAQ</a></li>
+Tag: a, Attributes: <a href="/faq">FAQ</a>
+Tag: li, Attributes: <li class=""><a href="/apps">Приложения</a></li>
+Tag: a, Attributes: <a href="/apps">Приложения</a>
+Tag: li, Attributes: <li class="hidden-xs "><a href="//core.telegram.org/api">API</a></li>
+Tag: a, Attributes: <a href="//core.telegram.org/api">API</a>
+Tag: li, Attributes: <li class="hidden-xs "><a href="/moderation">Модерация</a></li>
+Tag: a, Attributes: <a href="/moderation">Модерация</a>
+Tag: div, Attributes: <div class="container clearfix tl_page_container ">
+        <div class="tl_page">
+          <div class="container">
+  <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+          
+        </div>
+      </div>
+Tag: div, Attributes: <div class="tl_page">
+          <div class="container">
+  <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+          
+        </div>
+Tag: div, Attributes: <div class="container">
+  <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+Tag: div, Attributes: <div class="support_wrap">
+    <h1>Поддержка</h1>
+    
+    <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+  </div>
+Tag: h1, Attributes: <h1>Поддержка</h1>
+Tag: form, Attributes: <form class="" action="/support" method="POST">
+      <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+      <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+      <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+    </form>
+Tag: div, Attributes: <div class="form-group">
+        <label for="support_problem">Опишите свою проблему:</label>
+        <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+      </div>
+Tag: label, Attributes: <label for="support_problem">Опишите свою проблему:</label>
+Tag: textarea, Attributes: <textarea class="form-control" rows="3" id="support_problem" name="message"></textarea>
+Tag: div, Attributes: <div class="form-group">
+        <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+        <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+      </div>
+Tag: label, Attributes: <label for="support_phone">Ваше полное имя, отчество и фамилия:</label>
+Tag: input, Attributes: <input type="text" class="form-control" id="support_legal_name" name="legal_name" value="">
+Tag: div, Attributes: <div class="form-group">
+        <label for="support_phone">Ваш email:</label>
+        <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+      </div>
+Tag: label, Attributes: <label for="support_phone">Ваш email:</label>
+Tag: input, Attributes: <input type="text" class="form-control" id="support_email" placeholder="user@gmail.com" name="email" value="">
+Tag: div, Attributes: <div class="form-group">
+        <label for="support_phone">Ваш номер телефона:</label>
+        <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+      </div>
+Tag: label, Attributes: <label for="support_phone">Ваш номер телефона:</label>
+Tag: input, Attributes: <input type="text" class="form-control" id="support_phone" placeholder="+12223334455" name="phone" value="">
+Tag: div, Attributes: <div class="form-group">
+        <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+      </div>
+Tag: input, Attributes: <input type="hidden" class="form-control" id="support_lang" name="setln" value="">
+Tag: div, Attributes: <div class="support_submit">
+        <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+      </div>
+Tag: button, Attributes: <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+Tag: div, Attributes: <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram — это облачный мессенджер для мобильных устройств и компьютеров. Быстрый и безопасный.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Приватность</a></li>
+        <li><a href="/press">Для СМИ</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#mobile-apps">Для мобильных</a></h5>
+      <ul>
+        <li><a href="/dl/ios">iPhone/iPad</a></li>
+        <li><a href="/android">Android</a></li>
+        <li><a href="/dl/web">Мобильная веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#desktop-apps">Для компьютера</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="/dl/web">Веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="//core.telegram.org/">Платформы</a></h5>
+      <ul>
+        <li><a href="//core.telegram.org/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Переводы</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/blog">Блог</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/press">Для СМИ</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/moderation">Модерация</a></h5>
+    </div>
+  </div>
+</div>
+Tag: div, Attributes: <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram — это облачный мессенджер для мобильных устройств и компьютеров. Быстрый и безопасный.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Приватность</a></li>
+        <li><a href="/press">Для СМИ</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#mobile-apps">Для мобильных</a></h5>
+      <ul>
+        <li><a href="/dl/ios">iPhone/iPad</a></li>
+        <li><a href="/android">Android</a></li>
+        <li><a href="/dl/web">Мобильная веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/apps#desktop-apps">Для компьютера</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="/dl/web">Веб-версия</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="//core.telegram.org/">Платформы</a></h5>
+      <ul>
+        <li><a href="//core.telegram.org/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Переводы</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+Tag: div, Attributes: <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram — это облачный мессенджер для мобильных устройств и компьютеров. Быстрый и безопасный.
+    </div>
+Tag: h5, Attributes: <h5>Telegram</h5>
+Tag: div, Attributes: <div class="footer_telegram_description"></div>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Приватность</a></li>
+        <li><a href="/press">Для СМИ</a></li>
+      </ul>
+    </div>
+Tag: h5, Attributes: <h5><a href="/faq">О Telegram</a></h5>
+Tag: a, Attributes: <a href="/faq">О Telegram</a>
+Tag: ul, Attributes: <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Приватность</a></li>
+        <li><a href="/press">Для СМИ</a></li>
+      </ul>
+Tag: li, Attributes: <li><a href="/faq">FAQ</a></li>
+Tag: a, Attributes: <a href="/faq">FAQ</a>
+Tag: li, Attributes: <li><a href="/privacy">Приватность</a></li>
+Tag: a, Attributes: <a href="/privacy">Приватность</a>
+Tag: li, Attributes: <li><a href="/press">Для СМИ</a></li>
+Tag: a, Attributes: <a href="/press">Для СМИ</a>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/apps#mobile-apps">Для мобильных</a></h5>
+      <ul>
+        <li><a href="/dl/ios">iPhone/iPad</a></li>
+        <li><a href="/android">Android</a></li>
+        <li><a href="/dl/web">Мобильная веб-версия</a></li>
+      </ul>
+    </div>
+Tag: h5, Attributes: <h5><a href="/apps#mobile-apps">Для мобильных</a></h5>
+Tag: a, Attributes: <a href="/apps#mobile-apps">Для мобильных</a>
+Tag: ul, Attributes: <ul>
+        <li><a href="/dl/ios">iPhone/iPad</a></li>
+        <li><a href="/android">Android</a></li>
+        <li><a href="/dl/web">Мобильная веб-версия</a></li>
+      </ul>
+Tag: li, Attributes: <li><a href="/dl/ios">iPhone/iPad</a></li>
+Tag: a, Attributes: <a href="/dl/ios">iPhone/iPad</a>
+Tag: li, Attributes: <li><a href="/android">Android</a></li>
+Tag: a, Attributes: <a href="/android">Android</a>
+Tag: li, Attributes: <li><a href="/dl/web">Мобильная веб-версия</a></li>
+Tag: a, Attributes: <a href="/dl/web">Мобильная веб-версия</a>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/apps#desktop-apps">Для компьютера</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="/dl/web">Веб-версия</a></li>
+      </ul>
+    </div>
+Tag: h5, Attributes: <h5><a href="/apps#desktop-apps">Для компьютера</a></h5>
+Tag: a, Attributes: <a href="/apps#desktop-apps">Для компьютера</a>
+Tag: ul, Attributes: <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="/dl/web">Веб-версия</a></li>
+      </ul>
+Tag: li, Attributes: <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+Tag: a, Attributes: <a href="//desktop.telegram.org/">PC/Mac/Linux</a>
+Tag: li, Attributes: <li><a href="//macos.telegram.org/">macOS</a></li>
+Tag: a, Attributes: <a href="//macos.telegram.org/">macOS</a>
+Tag: li, Attributes: <li><a href="/dl/web">Веб-версия</a></li>
+Tag: a, Attributes: <a href="/dl/web">Веб-версия</a>
+Tag: div, Attributes: <div class="footer_column footer_column_platform">
+      <h5><a href="//core.telegram.org/">Платформы</a></h5>
+      <ul>
+        <li><a href="//core.telegram.org/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Переводы</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+Tag: h5, Attributes: <h5><a href="//core.telegram.org/">Платформы</a></h5>
+Tag: a, Attributes: <a href="//core.telegram.org/">Платформы</a>
+Tag: ul, Attributes: <ul>
+        <li><a href="//core.telegram.org/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Переводы</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+Tag: li, Attributes: <li><a href="//core.telegram.org/api">API</a></li>
+Tag: a, Attributes: <a href="//core.telegram.org/api">API</a>
+Tag: li, Attributes: <li><a href="//translations.telegram.org/">Переводы</a></li>
+Tag: a, Attributes: <a href="//translations.telegram.org/">Переводы</a>
+Tag: li, Attributes: <li><a href="//instantview.telegram.org/">Instant View</a></li>
+Tag: a, Attributes: <a href="//instantview.telegram.org/">Instant View</a>
+Tag: div, Attributes: <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/blog">Блог</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/press">Для СМИ</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="/moderation">Модерация</a></h5>
+    </div>
+  </div>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/faq">О Telegram</a></h5>
+    </div>
+Tag: h5, Attributes: <h5><a href="/faq">О Telegram</a></h5>
+Tag: a, Attributes: <a href="/faq">О Telegram</a>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/blog">Блог</a></h5>
+    </div>
+Tag: h5, Attributes: <h5><a href="/blog">Блог</a></h5>
+Tag: a, Attributes: <a href="/blog">Блог</a>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/press">Для СМИ</a></h5>
+    </div>
+Tag: h5, Attributes: <h5><a href="/press">Для СМИ</a></h5>
+Tag: a, Attributes: <a href="/press">Для СМИ</a>
+Tag: div, Attributes: <div class="footer_column">
+      <h5><a href="/moderation">Модерация</a></h5>
+    </div>
+Tag: h5, Attributes: <h5><a href="/moderation">Модерация</a></h5>
+Tag: a, Attributes: <a href="/moderation">Модерация</a>
+Tag: script, Attributes: <script src="/js/main.js?47"></script>
+Tag: script, Attributes: <script>backToTopInit("\u041d\u0430\u0432\u0435\u0440\u0445");
+removePreloadInit();
+</script>
