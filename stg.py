@@ -134,56 +134,69 @@ def setup_selenium_with_tor():
 
 def send_to_telegram_support_selenium(data, complaint_text):
     """
-    Отправляет жалобу через сайт поддержки Telegram с использованием Selenium.
+     Отправляет жалобу через сайт поддержки Telegram с использованием Selenium.
     """
     driver = None
     try:
-        driver = setup_selenium_with_tor()
-        driver.get("https://telegram.org/support?setln=ru")
-        print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Открыта страница: {driver.title}")
-
-        # Ожидание полей формы
-        try:
-            # Заполняем поле "ФИО"
-            legal_name_field = WebDriverWait(driver, 20).until(
-                EC.presence_of_element_located((By.NAME, "legal_name"))  # Используем name="legal_name"
-            )
-            legal_name_field.send_keys(data.get("username", "Не указано"))
-
-            # Заполняем поле "Текст жалобы"
-            message_field = WebDriverWait(driver, 20).until(
-                EC.presence_of_element_located((By.NAME, "message"))  # Используем name="message"
-            )
-            message_field.send_keys(complaint_text)
-
-            # Поля e-mail и номера телефона уже заполнены, отправляем форму
-            message_field.send_keys(Keys.RETURN)
-            print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Жалоба успешно отправлена через Selenium.")
-            log_status("Жалоба успешно отправлена через Selenium.")
-        except TimeoutException:
-            # Сохранение HTML страницы для диагностики
-            with open("page_source.html", "w", encoding="utf-8") as f:
-                f.write(driver.page_source)
-            print(f"[{Fore.RED}-{Style.RESET_ALL}] Поля формы не найдены. Проверьте страницу.")
-            log_status("Поля формы не найдены. Проверьте страницу.")
-            
-            # Сохранение скриншота страницы
-            screenshot_path = "screenshot.png"
-            driver.save_screenshot(screenshot_path)
-            print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Скриншот сохранён: {screenshot_path}")
-            
-            # Запись всех доступных элементов на странице
-            all_elements = driver.find_elements(By.XPATH, "//*")
-            with open("elements_log.txt", "w", encoding="utf-8") as f:
-                for element in all_elements:
-                    f.write(f"Tag: {element.tag_name}, Attributes: {element.get_attribute('outerHTML')}\n")
-            print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Все элементы страницы сохранены в 'elements_log.txt'.")
-    except WebDriverException as e:
-        print(f"[{Fore.RED}-{Style.RESET_ALL}] Ошибка при отправке через Selenium: {e}")
-        log_status(f"Ошибка при отправке через Selenium: {e}")
-    finally:
-        if driver:
-            driver.quit()
+         driver = setup_selenium_with_tor()
+         driver.get("https://telegram.org/support?setln=ru")
+         print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Открыта страница: {driver.title}")
+ 
+         # Ожидание полей формы
+         try:
+             # Генерация фейковых данных для ФИО с использованием Faker
+             fake_name = fake.name()  # Фейковое ФИО
+ 
+             # Заполняем поле "ФИО"
+             legal_name_field = WebDriverWait(driver, 20).until(
+                 EC.presence_of_element_located((By.NAME, "legal_name"))  # Используем name="legal_name"
+             )
+             legal_name_field.send_keys(fake_name)
+ 
+             # Заполняем поле "Текст жалобы"
+             message_field = WebDriverWait(driver, 20).until(
+                 EC.presence_of_element_located((By.NAME, "message"))  # Используем name="message"
+             )
+             message_field.send_keys(complaint_text)
+             
+             # Сохраняем скриншот после заполнения всех полей
+             filled_fields_screenshot = os.path.join(os.getcwd(), "filled_fields_screenshot.png")
+             driver.save_screenshot(filled_fields_screenshot)
+             print(f"[INFO] Скриншот после заполнения полей сохранён: {filled_fields_screenshot}")
+ 
+             # Поля e-mail и номера телефона уже заполнены, отправляем форму
+             message_field.send_keys(Keys.RETURN)
+             print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Жалоба успешно отправлена через Selenium.")
+             log_status("Жалоба успешно отправлена через Selenium.")
+ 
+             # Сохраняем скриншот после отправки жалобы
+             submitted_screenshot = os.path.join(os.getcwd(), "submitted_screenshot.png")
+             driver.save_screenshot(submitted_screenshot)
+             print(f"[INFO] Скриншот после отправки жалобы сохранён: {submitted_screenshot}")
+         except TimeoutException:
+             # Сохранение HTML страницы для диагностики
+             with open("page_source.html", "w", encoding="utf-8") as f:
+                 f.write(driver.page_source)
+             print(f"[{Fore.RED}-{Style.RESET_ALL}] Поля формы не найдены. Проверьте страницу.")
+             log_status("Поля формы не найдены. Проверьте страницу.")
+             
+             # Сохранение скриншота страницы
+             screenshot_path = "screenshot.png"
+             driver.save_screenshot(screenshot_path)
+             print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Скриншот сохранён: {screenshot_path}")
+             
+             # Запись всех доступных элементов на странице
+             all_elements = driver.find_elements(By.XPATH, "//*")
+             with open("elements_log.txt", "w", encoding="utf-8") as f:
+                 for element in all_elements:
+                     f.write(f"Tag: {element.tag_name}, Attributes: {element.get_attribute('outerHTML')}\n")
+             print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Все элементы страницы сохранены в 'elements_log.txt'.")
+     except WebDriverException as e:
+         print(f"[{Fore.RED}-{Style.RESET_ALL}] Ошибка при отправке через Selenium: {e}")
+         log_status(f"Ошибка при отправке через Selenium: {e}")
+     finally:
+         if driver:
+             driver.quit()
 
 def send_requests(data):
     """
