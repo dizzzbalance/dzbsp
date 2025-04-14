@@ -163,6 +163,28 @@ def send_to_telegram_support_selenium(data, complaint_text):
              filled_fields_screenshot = os.path.join(os.getcwd(), "filled_fields_screenshot.png")
              driver.save_screenshot(filled_fields_screenshot)
              print(f"[INFO] Скриншот после заполнения полей сохранён: {filled_fields_screenshot}")
+
+             # Находим кнопку "Отправить" по классу
+             submit_button = WebDriverWait(driver, 10).until(
+                 EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
+             )
+             
+             try:
+                 # Заново находим кнопку "Отправить", если DOM был обновлён
+                 submit_button = WebDriverWait(driver, 10).until(
+                 EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
+                 )
+                 submit_button.click()
+                 print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Жалоба успешно отправлена через Selenium.")
+             except TimeoutException:
+                 print(f"[{Fore.RED}-{Style.RESET_ALL}] Кнопка 'Отправить' не найдена.")
+             except StaleElementReferenceException:
+                 print(f"[{Fore.RED}-{Style.RESET_ALL}] Кнопка 'Отправить' стала недействительной. Переинициализация...")
+                 submit_button = WebDriverWait(driver, 10).until(
+                 EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
+                 )           
+            # Нажимаем на кнопку
+                 submit_button.click()
  
              # Поля e-mail и номера телефона уже заполнены, отправляем форму
              message_field.send_keys(Keys.RETURN)
@@ -191,10 +213,10 @@ def send_to_telegram_support_selenium(data, complaint_text):
                  for element in all_elements:
                      f.write(f"Tag: {element.tag_name}, Attributes: {element.get_attribute('outerHTML')}\n")
              print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Все элементы страницы сохранены в 'elements_log.txt'.")
-     except WebDriverException as e:
+    except WebDriverException as e:
          print(f"[{Fore.RED}-{Style.RESET_ALL}] Ошибка при отправке через Selenium: {e}")
          log_status(f"Ошибка при отправке через Selenium: {e}")
-     finally:
+    finally:
          if driver:
              driver.quit()
 
@@ -222,9 +244,9 @@ def send_requests(data):
             complaint_template = random.choice(complaint_types[complaint_type]["texts"])
             if user_id:
                 complaint_text = complaint_template.format(
-                    user=username,
-                    user_id=user_id,
-                    violation_link=violation_link,
+                user=data["username"],
+                user_id=data["user_id"] or "не указан",
+                violation_link=data["violation_link"] or "не указана"
                 )
             else:
                 # Если user_id отсутствует, формируем текст без него

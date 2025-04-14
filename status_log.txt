@@ -322,3 +322,67 @@ Stacktrace:
 Жалоба успешно отправлена через Selenium.
 Жалоба успешно отправлена через Selenium.
 Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Ошибка при отправке через Selenium: Message: The element with the reference d76a0b81-761f-4b7d-b157-5c4cf63564de is stale; either its node document is not the active document, or it is no longer connected to the DOM; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:796:5
+getKnownElement@chrome://remote/content/marionette/json.sys.mjs:405:11
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:263:20
+cloneObject@chrome://remote/content/marionette/json.sys.mjs:59:24
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
+json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
+
+Ошибка при отправке через Selenium: Message: The element with the reference f43dfd56-61f0-4e39-821c-39eac864b677 is stale; either its node document is not the active document, or it is no longer connected to the DOM; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:796:5
+getKnownElement@chrome://remote/content/marionette/json.sys.mjs:405:11
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:263:20
+cloneObject@chrome://remote/content/marionette/json.sys.mjs:59:24
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
+json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
+
+Ошибка при отправке через Selenium: Message: The element with the reference 2c8b8c04-7cad-461b-9147-79a7a55d17e8 is stale; either its node document is not the active document, or it is no longer connected to the DOM; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:796:5
+getKnownElement@chrome://remote/content/marionette/json.sys.mjs:405:11
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:263:20
+cloneObject@chrome://remote/content/marionette/json.sys.mjs:59:24
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
+json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
+
+Программа была прервана пользователем.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка проверки Tor: Expecting value: line 1 column 1 (char 0)
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка: отсутствует ключ 'id' в данных.
+Ошибка при отправке через Selenium: Message: The element with the reference 6739e678-13c2-4843-8509-6526bb72573f is stale; either its node document is not the active document, or it is no longer connected to the DOM; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:796:5
+getKnownElement@chrome://remote/content/marionette/json.sys.mjs:405:11
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:263:20
+cloneObject@chrome://remote/content/marionette/json.sys.mjs:59:24
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
+json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
+
