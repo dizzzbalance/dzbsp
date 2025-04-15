@@ -5,7 +5,7 @@ from selenium.webdriver.common.proxy import Proxy, ProxyType
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import WebDriverException, NoSuchElementException, TimeoutException
+from selenium.common.exceptions import WebDriverException, NoSuchElementException, TimeoutException, StaleElementReferenceException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from colorama import Fore, Style
@@ -34,16 +34,16 @@ complaint_types = {
         "Good afternoon, please block access to pornographic content. Account with ID: {user_id}. The problem is that it sells child pornography",
          "Hello, I want to file a complaint about pornography. User ID: {user_id} sells child pornography, please take steps to delete the account. Thank you",
          "This user with ID: {user_id} distributes prohibited children's content (dp, cp), I ask you to delete this account. Thank you",
-         "Пользователь {user_id} распространяет порнографические материалы. Прошу заблокировать его аккаунт за нарушение правил платформы. Ссылка на материалы: {id}",
-                "Обнаружено распространение порнографии пользователем {user_id}. Прошу принять меры. Ссылка на материалы: {id}",
-                "Добрый день, прошу заблокировать аккаунт с  ID: {user_id}. Проблема в том,что он занимается продажей детской порнографией, вот ссылка на нарушение: {id}",
-                "Здравствуйте, хочу подать жалобу на порнографию.  Пользователь с  ID: {user_id} продает детскую порнографию,вот ссылка на нарушение:{id},прошу принять меры по удалению акаунта. Спасибо",
-                "Данный пользователь с ID: {user_id} растространяет запрещеный детский контент (дп,цп) прошу вас удалить данный акаунт.Также ссылка на нарушение:{id}.Спасибо",
-                "Добрый день, прошу заблокировать аккунт с айди: {user_id} за распространение порнографии, точнее этот человек размещает порнографию, а также детскую порнографию в чатах ({id}) и так далее, что может повлиять на психику людей, которые находятся в этих чатах, а также это нарушает вашу политику, прошу заблокировать данного человека, также на момент жалобы у этого человека на аватарке было неприличное фото, поэтому прошу вас отреагировать на это быстро и четко. Заранее спасибо!",
-                         "Hello, I want to file a complaint about pornography. User with ID: {user_id} sells child pornography,link to violation: {id},please take steps to delete the account. Thank you",
+         "Пользователь {user_id} распространяет порнографические материалы. Прошу заблокировать его аккаунт за нарушение правил платформы. Ссылка на материалы: {user_id}",
+                "Обнаружено распространение порнографии пользователем {user_id}. Прошу принять меры. Ссылка на материалы: {user_id}",
+                "Добрый день, прошу заблокировать аккаунт с  ID: {user_id}. Проблема в том,что он занимается продажей детской порнографией, вот ссылка на нарушение: {user_id}",
+                "Здравствуйте, хочу подать жалобу на порнографию.  Пользователь с  ID: {user_id} продает детскую порнографию,вот ссылка на нарушение:{user_id},прошу принять меры по удалению акаунта. Спасибо",
+                "Данный пользователь с ID: {user_id} растространяет запрещеный детский контент (дп,цп) прошу вас удалить данный акаунт.Также ссылка на нарушение:{user_id}.Спасибо",
+                "Добрый день, прошу заблокировать аккунт с айди: {user_id} за распространение порнографии, точнее этот человек размещает порнографию, а также детскую порнографию в чатах ({user_id}) и так далее, что может повлиять на психику людей, которые находятся в этих чатах, а также это нарушает вашу политику, прошу заблокировать данного человека, также на момент жалобы у этого человека на аватарке было неприличное фото, поэтому прошу вас отреагировать на это быстро и четко. Заранее спасибо!",
+                         "Hello, I want to file a complaint about pornography. User with ID: {user_id} sells child pornography,link to violation: {user_id},please take steps to delete the account. Thank you",
                 "Good afternoon, please block the account with ID: {user_id}. The problem is that he is selling child pornography.Link to violation: {violation_link}.",
-                "This user with ID: {user_id} distributes prohibited children's content (dp, cp),and link to violation: {id},I ask you to delete this account. Thank you",
-                "Good afternoon, I ask you to block the account with ID: {user_id} for distributing pornography, more precisely, this person posts pornography, as well as child pornography in chats and so on,link to violation: {id},which can affect the psyche of people who are in these chats, and also violates your policy, I ask you to block this person, also at the time of the complaint this person had an indecent photo on his avatar, so I ask you to respond to this quickly and clearly. Thank you in advance!",
+                "This user with ID: {user_id} distributes prohibited children's content (dp, cp),and link to violation: {user_id},I ask you to delete this account. Thank you",
+                "Good afternoon, I ask you to block the account with ID: {user_id} for distributing pornography, more precisely, this person posts pornography, as well as child pornography in chats and so on,link to violation: {user_id},which can affect the psyche of people who are in these chats, and also violates your policy, I ask you to block this person, also at the time of the complaint this person had an indecent photo on his avatar, so I ask you to respond to this quickly and clearly. Thank you in advance!",
     ]},
     3: {"name": "Фишинг", "texts": [
         "Здравствуйте, сообщаю о подозрительной попытке фишинга. Акк: {user} ID: {user_id}.",
@@ -64,7 +64,7 @@ complaint_types = {
        "Привествую Вас. Я являюсь родителем моего ребёнка и ему поступют угрозы об сливе данных с данного аккаунта {user}, id:{user_id}. Прошу удалить его аккаунт, так как теперь у моего ребёнка нарушена психика!",
        "Мне сказали, что телеграм самый безопасный мессенджер, только сейчас этот пользователь {user} id: {user_id} хочет слить мои данные.",
        "Hello, dear telegram moderator, I want to complain to you about a channel that sells doxing and swatting services ID: {user_id}, I ask you to take measures to delete the account.",
-         "Good day, I ask you to take action on my complaint. The telegram user under ID: {id} is engaged in selling the services of Doxing and Swatting, I ask you to take action. Thank you.",
+         "Good day, I ask you to take action on my complaint. The telegram user under ID: {user_id} is engaged in selling the services of Doxing and Swatting, I ask you to take action. Thank you.",
          "This account under ID: {user_id} is engaged in doxing and swatting, please take measures to delete the account.",
     ]},
     5: {"name": "Мошенничество", "texts": [
@@ -134,91 +134,91 @@ def setup_selenium_with_tor():
 
 def send_to_telegram_support_selenium(data, complaint_text):
     """
-     Отправляет жалобу через сайт поддержки Telegram с использованием Selenium.
+    Отправляет жалобу через сайт поддержки Telegram с использованием Selenium.
     """
     driver = None
     try:
-         driver = setup_selenium_with_tor()
-         driver.get("https://telegram.org/support?setln=ru")
-         print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Открыта страница: {driver.title}")
- 
-         # Ожидание полей формы
-         try:
-             # Генерация фейковых данных для ФИО с использованием Faker
-             fake_name = fake.name()  # Фейковое ФИО
- 
-             # Заполняем поле "ФИО"
-             legal_name_field = WebDriverWait(driver, 20).until(
-                 EC.presence_of_element_located((By.NAME, "legal_name"))  # Используем name="legal_name"
-             )
-             legal_name_field.send_keys(fake_name)
- 
-             # Заполняем поле "Текст жалобы"
-             message_field = WebDriverWait(driver, 20).until(
-                 EC.presence_of_element_located((By.NAME, "message"))  # Используем name="message"
-             )
-             message_field.send_keys(complaint_text)
-             
-             # Сохраняем скриншот после заполнения всех полей
-             filled_fields_screenshot = os.path.join(os.getcwd(), "filled_fields_screenshot.png")
-             driver.save_screenshot(filled_fields_screenshot)
-             print(f"[INFO] Скриншот после заполнения полей сохранён: {filled_fields_screenshot}")
+        driver = setup_selenium_with_tor()
+        driver.get("https://telegram.org/support?setln=ru")
+        print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Открыта страница: {driver.title}")
 
-             # Находим кнопку "Отправить" по классу
-             submit_button = WebDriverWait(driver, 10).until(
-                 EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
-             )
-             
-             try:
-                 # Заново находим кнопку "Отправить", если DOM был обновлён
-                 submit_button = WebDriverWait(driver, 10).until(
-                 EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
-                 )
-                 submit_button.click()
-                 print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Жалоба успешно отправлена через Selenium.")
-             except TimeoutException:
-                 print(f"[{Fore.RED}-{Style.RESET_ALL}] Кнопка 'Отправить' не найдена.")
-             except StaleElementReferenceException:
-                 print(f"[{Fore.RED}-{Style.RESET_ALL}] Кнопка 'Отправить' стала недействительной. Переинициализация...")
-                 submit_button = WebDriverWait(driver, 10).until(
-                 EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
-                 )           
+        # Ожидание полей формы
+        try:
+            # Генерация фейковых данных для ФИО и электронной почты с использованием Faker
+            fake_name = fake.name()  # Фейковое ФИО
+            fake_email = fake.email()  # Фейковая электронная почта
+
+            # Заполняем поле "ФИО"
+            legal_name_field = WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.NAME, "legal_name"))  # Используем name="legal_name"
+            )
+            legal_name_field.send_keys(fake_name)
+
+            # Заполняем поле "E-mail"
+            email_field = WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.NAME, "email"))  # Используем name="email"
+            )
+            email_field.send_keys(fake_email)
+
+            # Заполняем поле "Текст жалобы"
+            message_field = WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.NAME, "message"))  # Используем name="message"
+            )
+            message_field.send_keys(complaint_text)
+            
+            # Сохраняем скриншот после заполнения всех полей
+            filled_fields_screenshot = os.path.join(os.getcwd(), "filled_fields_screenshot.png")
+            driver.save_screenshot(filled_fields_screenshot)
+            print(f"[INFO] Скриншот после заполнения полей сохранён: {filled_fields_screenshot}")
+
+            # Находим кнопку "Отправить" по классу
+            submit_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
+            )
+            
             # Нажимаем на кнопку
-                 submit_button.click()
- 
-             # Поля e-mail и номера телефона уже заполнены, отправляем форму
-             message_field.send_keys(Keys.RETURN)
-             print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Жалоба успешно отправлена через Selenium.")
-             log_status("Жалоба успешно отправлена через Selenium.")
- 
-             # Сохраняем скриншот после отправки жалобы
-             submitted_screenshot = os.path.join(os.getcwd(), "submitted_screenshot.png")
-             driver.save_screenshot(submitted_screenshot)
-             print(f"[INFO] Скриншот после отправки жалобы сохранён: {submitted_screenshot}")
-         except TimeoutException:
-             # Сохранение HTML страницы для диагностики
-             with open("page_source.html", "w", encoding="utf-8") as f:
-                 f.write(driver.page_source)
-             print(f"[{Fore.RED}-{Style.RESET_ALL}] Поля формы не найдены. Проверьте страницу.")
-             log_status("Поля формы не найдены. Проверьте страницу.")
-             
-             # Сохранение скриншота страницы
-             screenshot_path = "screenshot.png"
-             driver.save_screenshot(screenshot_path)
-             print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Скриншот сохранён: {screenshot_path}")
-             
-             # Запись всех доступных элементов на странице
-             all_elements = driver.find_elements(By.XPATH, "//*")
-             with open("elements_log.txt", "w", encoding="utf-8") as f:
-                 for element in all_elements:
-                     f.write(f"Tag: {element.tag_name}, Attributes: {element.get_attribute('outerHTML')}\n")
-             print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Все элементы страницы сохранены в 'elements_log.txt'.")
+            try:
+                submit_button.click()
+                print(f"[{Fore.GREEN}+{Style.RESET_ALL}] Жалоба успешно отправлена через Selenium.")
+            except StaleElementReferenceException:
+                print(f"[{Fore.RED}-{Style.RESET_ALL}] Кнопка 'Отправить' стала недействительной. Повторный поиск...")
+                submit_button = WebDriverWait(driver, 10).until(
+                    EC.element_to_be_clickable((By.CLASS_NAME, "btn-primary"))
+                )
+                submit_button.click()
+            except TimeoutException:
+                print(f"[{Fore.RED}-{Style.RESET_ALL}] Кнопка 'Отправить' не найдена.")
+
+            # Сохраняем скриншот после отправки жалобы
+            submitted_screenshot = os.path.join(os.getcwd(), "submitted_screenshot.png")
+            driver.save_screenshot(submitted_screenshot)
+            print(f"[INFO] Скриншот после отправки жалобы сохранён: {submitted_screenshot}")
+            log_status("Жалоба успешно отправлена через Selenium.")
+
+        except TimeoutException:
+            # Сохранение HTML страницы для диагностики
+            with open("page_source.html", "w", encoding="utf-8") as f:
+                f.write(driver.page_source)
+            print(f"[{Fore.RED}-{Style.RESET_ALL}] Поля формы не найдены. Проверьте страницу.")
+            log_status("Поля формы не найдены. Проверьте страницу.")
+            
+            # Сохранение скриншота страницы
+            screenshot_path = "screenshot.png"
+            driver.save_screenshot(screenshot_path)
+            print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Скриншот сохранён: {screenshot_path}")
+            
+            # Запись всех доступных элементов на странице
+            all_elements = driver.find_elements(By.XPATH, "//*")
+            with open("elements_log.txt", "w", encoding="utf-8") as f:
+                for element in all_elements:
+                    f.write(f"Tag: {element.tag_name}, Attributes: {element.get_attribute('outerHTML')}\n")
+            print(f"[{Fore.YELLOW}*{Style.RESET_ALL}] Все элементы страницы сохранены в 'elements_log.txt'.")
     except WebDriverException as e:
-         print(f"[{Fore.RED}-{Style.RESET_ALL}] Ошибка при отправке через Selenium: {e}")
-         log_status(f"Ошибка при отправке через Selenium: {e}")
+        print(f"[{Fore.RED}-{Style.RESET_ALL}] Ошибка при отправке через Selenium: {e}")
+        log_status(f"Ошибка при отправке через Selenium: {e}")
     finally:
-         if driver:
-             driver.quit()
+        if driver:
+            driver.quit()
 
 def send_requests(data):
     """
@@ -302,12 +302,13 @@ def get_user_input():
         violation_link = input("Введите ссылку на нарушение (можно пропустить): ").strip()
 
         return {
-            "complaint_type": complaint_type,
-            "request_count": request_count,
-            "username": username,
-            "user_id": user_id,
-            "violation_link": violation_link,
-        }
+         "complaint_type": complaint_type,
+         "request_count": request_count,
+         "username": username,
+         "user_id": user_id or "не указан",
+         "violation_link": violation_link,
+         }
+
     except ValueError as e:
         print(f"[{Fore.RED}-{Style.RESET_ALL}] Ошибка ввода: {e}")
         log_status(f"Ошибка ввода: {e}")

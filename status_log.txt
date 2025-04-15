@@ -386,3 +386,90 @@ deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
 json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
 
+Ошибка при отправке через Selenium: Message: The element with the reference 3cfb241d-7d7f-4f5d-9ab7-65d324db2c04 is stale; either its node document is not the active document, or it is no longer connected to the DOM; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:796:5
+getKnownElement@chrome://remote/content/marionette/json.sys.mjs:405:11
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:263:20
+cloneObject@chrome://remote/content/marionette/json.sys.mjs:59:24
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
+json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
+
+Программа была прервана пользователем.
+Ошибка при отправке через Selenium: Message: The element with the reference f8a69b74-a904-4a51-9744-6ccf990d7f2a is stale; either its node document is not the active document, or it is no longer connected to the DOM; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:796:5
+getKnownElement@chrome://remote/content/marionette/json.sys.mjs:405:11
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:263:20
+cloneObject@chrome://remote/content/marionette/json.sys.mjs:59:24
+deserializeJSON@chrome://remote/content/marionette/json.sys.mjs:293:16
+json.deserialize@chrome://remote/content/marionette/json.sys.mjs:297:10
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:202:30
+
+Элемент формы или кнопка не найдены.
+Программа была прервана пользователем.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Программа была прервана пользователем.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
+Жалоба успешно отправлена через Selenium.
